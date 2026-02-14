@@ -239,15 +239,6 @@ cursor:pointer;
   border-color: red;
 }
 
-/* ================= FOOTER ================= */
-
-footer{
-background:#000;
-color:white;
-text-align:center;
-padding:20px;
-}
-
 /* ================= MOBILE RESPONSIVE ================= */
 
 @media (max-width: 768px) {
@@ -261,22 +252,24 @@ padding:20px;
     display:block;
   }
 
-  /* Hide nav initially */
+  /* Full screen mobile menu */
   .nav-links{
-    position:absolute;
-    top:60px;
-    left:0;
-    width:100%;
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:70%;
+    height:100vh;
     background:#000;
     flex-direction:column;
-    gap:15px;
-    padding:20px;
-    display:none;
+    gap:25px;
+    padding:80px 20px;
+    transition:0.3s ease;
+    z-index:999;
   }
 
   /* When active */
   .nav-links.show{
-    display:flex;
+    right:0;
   }
 
   #search{
