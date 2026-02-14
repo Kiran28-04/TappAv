@@ -127,7 +127,11 @@ background:#c40000;
   border-radius: 20px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
   flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
+
 
 .product-left {
   flex: 1;
@@ -308,3 +312,4 @@ padding:20px;
   }
 
 }
+
