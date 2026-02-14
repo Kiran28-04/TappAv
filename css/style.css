@@ -61,7 +61,9 @@ display:none;
 font-size:26px;
 cursor:pointer;
 color:white;
+margin-left:auto;   /* THIS PUSHES IT TO RIGHT */
 }
+
 
 /* SEARCH */
 #search{
@@ -241,11 +243,16 @@ cursor:pointer;
 
 /* ================= MOBILE RESPONSIVE ================= */
 
-@media (max-width: 768px) {
+@media (max-width: 768px){
 
   header{
     padding:12px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
   }
+
+}
 
   /* Show hamburger */
   .menu-toggle{
@@ -306,3 +313,4 @@ cursor:pointer;
   }
 
 }
+
