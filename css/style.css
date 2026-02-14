@@ -9,7 +9,7 @@ body{
 background:#f5f5f5;
 }
 
-/* ================= HEADER ================= */
+/* HEADER */
 
 header{
 display:flex;
@@ -42,7 +42,6 @@ align-items:center;
 .nav-links a{
 color:white;
 text-decoration:none;
-font-size:15px;
 }
 
 .nav-links a.active,
@@ -50,15 +49,51 @@ font-size:15px;
 color:red;
 }
 
-/* HAMBURGER */
-.menu-toggle{
-display:none;
-font-size:26px;
-cursor:pointer;
+/* HERO */
+
+.hero{
+height:80vh;
+background:url('https://images.unsplash.com/photo-1593359677879-a4bb92f829d1') center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
 color:white;
+text-align:center;
 }
 
-/* ================= PRODUCT PAGE ================= */
+.hero::before{
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.7);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+}
+
+.hero-content h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.btn{
+padding:12px 24px;
+background:#e60000;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+.btn:hover{
+background:#b80000;
+}
+
+/* PRODUCT */
 
 .product-detail{
 padding:100px 8%;
@@ -77,73 +112,19 @@ border-radius:20px;
 box-shadow:0 30px 60px rgba(0,0,0,0.08);
 }
 
-.product-left{
-text-align:center;
-}
-
 .product-left img{
 width:100%;
 max-width:450px;
 border-radius:12px;
-transition:0.3s;
-}
-
-.product-left img:hover{
-transform:scale(1.05);
-}
-
-.product-right h1{
-font-size:40px;
-margin-bottom:20px;
 }
 
 .price{
 font-size:26px;
 color:#e60000;
-font-weight:bold;
-margin-bottom:20px;
+margin:20px 0;
 }
 
-.description{
-color:#555;
-margin-bottom:25px;
-line-height:1.6;
-}
-
-.features{
-margin-bottom:30px;
-}
-
-.features li{
-margin-bottom:10px;
-list-style:none;
-position:relative;
-padding-left:20px;
-}
-
-.features li::before{
-content:"✔";
-color:green;
-position:absolute;
-left:0;
-}
-
-.btn{
-padding:14px 28px;
-background:#e60000;
-color:white;
-border:none;
-border-radius:8px;
-font-size:15px;
-cursor:pointer;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#b80000;
-}
-
-/* ================= FOOTER ================= */
+/* FOOTER */
 
 footer{
 background:#000;
@@ -153,22 +134,38 @@ padding:20px;
 margin-top:80px;
 }
 
-/* ================= MOBILE ================= */
+/* MOBILE */
 
-@media(max-width:768px){
-
-header{
-padding:15px 5%;
-}
-
-.nav-links{
+.menu-toggle{
 display:none;
 }
+
+@media(max-width:768px){
 
 .menu-toggle{
 display:block;
 position:absolute;
 right:20px;
+font-size:26px;
+cursor:pointer;
+}
+
+.nav-links{
+position:fixed;
+top:0;
+right:-100%;
+width:70%;
+height:100vh;
+background:#000;
+flex-direction:column;
+gap:25px;
+padding:80px 20px;
+transition:0.3s ease;
+display:flex;
+}
+
+.nav-links.show{
+right:0;
 }
 
 .product-wrapper{
@@ -177,7 +174,7 @@ gap:40px;
 padding:30px;
 }
 
-.product-right h1{
+.hero-content h1{
 font-size:28px;
 }
 
