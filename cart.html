@@ -1,42 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Contact | TappAV</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css?v=6">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart | TappAV</title>
+<link rel="stylesheet" href="css/style.css?v=60">
 </head>
+
 <body>
 
 <header>
+<div class="logo">Tapp<span>AV</span></div>
+<div class="menu-toggle" id="menu-toggle">☰</div>
 
-  <div class="logo">Tapp<span>AV</span></div>
-
-  <div class="menu-toggle" id="menu-toggle">
-    ☰
-  </div>
-
-  <nav>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="speakers.html">Speakers</a></li>
-      <li><a href="product.html">Projectors</a></li>
-      <li><a href="headphones.html">Headphones</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
-    </ul>
-  </nav>
-
+<nav>
+<ul class="nav-links" id="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="speakers.html">Speakers</a></li>
+<li><a href="product.html">Projectors</a></li>
+<li><a href="headphones.html">Headphones</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li>
+</ul>
+</nav>
 </header>
 
-<section class="cart-section">
-<h1>Your Cart</h1>
-<div id="cart-items"></div>
-<h2>Total: ₹<span id="cart-total">0</span></h2>
+<section style="padding:100px 8%;">
+<h1>Your Shopping Cart</h1>
+
+<div id="cart-items" style="margin-top:30px;"></div>
+
+<h2 style="margin-top:30px;">Total: ₹<span id="cart-total">0</span></h2>
+
 </section>
+
+<footer>© 2026 TappAV</footer>
 
 <script src="js/script.js"></script>
 </body>
 </html>
-
-
-
